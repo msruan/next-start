@@ -1,7 +1,7 @@
 function Footer() {
   return (
     <div>
-      <p>This is my personal footer</p>
+      <p className="text-center">This is my personal footer</p>
     </div>
   );
 }

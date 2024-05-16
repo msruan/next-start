@@ -1,15 +1,11 @@
-import Link from "next/link";
+import Links from "./links/Links";
 
 function NavBar() {
   return (
-    <div className="flex w-full">
-      <div className="w-1/6 p-2">Logo</div>
-      <div className="flex justify-between w-5/6 p-2 bg-purple-400 ">
-        <Link href="/">Home</Link>
-        <Link href="/about">About</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/contact">Contact</Link>
-      </div>
+    //Vou definir o w do lado de fora pra facilitar a responsividade
+    <div className="flex h-[100px] w-full items-center">
+      <div className="w-2/6 p-2 text-3xl font-extrabold">Logo</div>
+      <Links className="w-4/6"></Links>
     </div>
   );
 }
