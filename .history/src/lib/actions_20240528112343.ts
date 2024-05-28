@@ -1,14 +1,12 @@
 "use server";
 import { unstable_noStore as noStore } from "next/cache";
-import { cookies } from "next/headers";
 import { AxiosResponse } from "axios";
-import { getIronSession } from "iron-session";
 
 import axiosInstance from "@/config/axiosConfig";
 import { IPost, Post } from "@/models/post";
 import { IUser, User } from "@/models/user";
 
-import { SessionData, sessionOptions, signIn, signOut } from "./auth";
+import { signIn, signOut } from "./auth";
 import { connectToDb } from "./utils";
 
 export const getPosts = async (): Promise<IPost[]> => {
@@ -62,8 +60,6 @@ export async function handleLogout() {
   await signOut();
 }
 
-export const getSession = async () => {
-  "use server";
-  const session = await getIronSession<SessionData>(cookies(), sessionOptions);
-  return session;
-};
+export const getSession = async () ->{
+  
+}

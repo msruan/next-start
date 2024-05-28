@@ -63,7 +63,6 @@ export async function handleLogout() {
 }
 
 export const getSession = async () => {
-  "use server";
   const session = await getIronSession<SessionData>(cookies(), sessionOptions);
   return session;
 };

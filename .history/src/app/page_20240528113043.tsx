@@ -9,8 +9,8 @@ function HomePage() {
 }
 
 const Container = async () => {
-  const session = await getSession();
-  console.log(session);
+  const session = (await getSession())
+  console.log()
   return (
     <main className="flex h-full w-full gap-24 p-3">
       <div className="flex flex-1 flex-col justify-center gap-12">

@@ -73,9 +73,9 @@ export interface SessionData {
   id?: string;
 }
 
-export const DefaultSessionData: SessionData = {
-  isLoggedIn: false,
-};
+export DefaultSessionData {
+  
+}
 
 export const sessionOptions: SessionOptions = {
   password: process.env.AUTH_SECRET!,

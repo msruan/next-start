@@ -8,7 +8,7 @@ export const GET = async () => {
     connectToDb();
 
     const posts = await Post.find();
-    return NextResponse.json(posts);
+    return NextResponse.json({posts});
   } catch (err) {
     console.log(err);
     return NextResponse.error();

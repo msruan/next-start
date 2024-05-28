@@ -2,15 +2,13 @@ import React from "react";
 import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
-import { getSession } from "@/lib/actions";
 
 function HomePage() {
   return <Container />;
 }
 
 const Container = async () => {
-  const session = await getSession();
-  console.log(session);
+  const session = getSe
   return (
     <main className="flex h-full w-full gap-24 p-3">
       <div className="flex flex-1 flex-col justify-center gap-12">

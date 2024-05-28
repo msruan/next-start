@@ -1,6 +1,5 @@
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
-import { SessionOptions } from "iron-session";
 import mongoose, { HydratedDocument } from "mongoose";
 
 import { IUser, User } from "@/models/user";
@@ -63,21 +62,12 @@ export const {
   };
 });
 
-export interface SessionData {
+interface ISessionData {
   name?: string;
   username?: string;
   email?: string;
-  isLoggedIn: boolean;
+  password?: string;
   avatar?: string;
   isAdmin?: boolean;
   id?: string;
 }
-
-export const DefaultSessionData: SessionData = {
-  isLoggedIn: false,
-};
-
-export const sessionOptions: SessionOptions = {
-  password: process.env.AUTH_SECRET!,
-  cookieName: "biancacookie",
-};
