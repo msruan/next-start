@@ -7,7 +7,7 @@ export interface IUser {
   password: string;
   avatar: string;
   isAdmin: boolean;
-  id: string;
+  _id: string;
 }
 
 const UserSchema = new mongoose.Schema<IUser>(
